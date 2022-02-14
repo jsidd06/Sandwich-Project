@@ -1,8 +1,9 @@
 import React from 'react'
+import WeatherCardScreen from '../../views/WeatherCardScreen/WeatherCardScreen'
 
 function Main() {
   return (
-    <div>hi</div>
+    <div><WeatherCardScreen /></div>
   )
 }
 
