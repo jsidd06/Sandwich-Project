@@ -1,12 +1,13 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Main from './Components/Main/Main'
+import Home from './views/Home/Home'
+import WeatherCardScreen from './views/WeatherCardScreen/WeatherCardScreen'
 function App() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/weather" element={<Main />} />
+            <Route path="/" exact element={<Home />} />
+            <Route path="/weather" element={<WeatherCardScreen />} />
             </Routes>
     </BrowserRouter>
   )
