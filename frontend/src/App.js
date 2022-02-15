@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Home from './views/Home/Home'
+import UniversityCardScreen from './views/UniversityCardScreen/UniversityCardScreen'
 import WeatherCardScreen from './views/WeatherCardScreen/WeatherCardScreen'
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/weather" element={<WeatherCardScreen />} />
+            <Route path="/university" element={<UniversityCardScreen />} />
             </Routes>
     </BrowserRouter>
   )
