@@ -38,7 +38,7 @@ function Home() {
               </Link>
             </Col>
             <Col md="4">
-              <Link to="/university">
+              <Link to="/university" className="overlay-image">
                 <ImgOverlay
                   imgSrc={university}
                   bgColor="pink"

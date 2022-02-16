@@ -1,26 +1,23 @@
 import axios from "axios";
 import React, { useState } from "react";
-import {
-  Button,
-  Card,
-  CardBody,
-  Col,
-  Container,
-  Input,
-  Row,
-} from "reactstrap"
+import { Button, Card, CardBody, Col, Container, Input, Row } from "reactstrap";
 function UniversityCardScreen() {
   const [universities, setUniversities] = useState([]);
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState("");
-  const [isloading, setIsloading] = useState(true);
+  const [isloading, setIsloading] = useState(false);
   const universitiesHandler = () => {
+    setIsloading(true);
     axios
       .get(`http://universities.hipolabs.com/search?${country}=United+States`)
       .then((res) => {
         console.log(res.data);
         setUniversities(res.data);
         setIsloading(false);
+      })
+      .catch((err) => {
+        setIsloading(false);
+        console.log(err);
       });
   };
   return (
@@ -31,11 +28,24 @@ function UniversityCardScreen() {
           placeholder="enter your university name"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <Button className="mt-3" onClick={universitiesHandler}>Check Now</Button>
-        { universities  &&
+        <Button className="mt-3" onClick={universitiesHandler}>
+          Check Now
+        </Button>
+
+        {isloading ? (
+          <div className="mt-5 text-center">
+            <i
+              style={{ fontSize: 50 }}
+              className="fas text-success fa-spinner fa-spin"
+            ></i>
+          </div>
+        ) : (
+          universities &&
           universities
-            .filter((university) =>
-              university.country.toLowerCase().includes(search.toLowerCase())
+            .filter(
+              (university) =>
+                university.name.toLowerCase().includes(search.toLowerCase()) ||
+                university.country.toLowerCase().includes(search.toLowerCase())
             )
             .map((university) => (
               <>
@@ -57,7 +67,8 @@ function UniversityCardScreen() {
                   </CardBody>
                 </Card>
               </>
-            ))}
+            ))
+        )}
       </Container>
     </>
   );
