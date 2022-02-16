@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "image-overlay-react": "^1.0.3",
-    "react-paginate": "^8.1.0"
-  }
-}
