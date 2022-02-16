@@ -4,72 +4,39 @@ import {
   Card,
   CardBody,
   CardHeader,
-  CardImg,
   Col,
   Container,
   Row,
 } from "reactstrap";
-import weather from "../../Images/11machin-illo-articleLarge-v3.jpg";
 import { ImgOverlay } from "image-overlay-react";
-import "image-overlay-react/dist/index.css";
-import university from "../../Images/20virus-briefing-rice-university-virtual-mobileMasterAt3x.jpg";
-import animal from "../../Images/1122614.jpg"
+import HomeScreenFormate from "../../Data/Data";
 function Home() {
   return (
-    <Container style={{ textAlign: "center" }}>
+    <Container>
+      {" "}
       <Card>
         <CardHeader>
           <h1>Sandwich</h1>
         </CardHeader>
         <CardBody>
           <Row>
-            <Col md="4">
-              <Link className="overlay-image" to="/weather">
-                <ImgOverlay
-                  imgSrc={weather}
-                  bgColor="pink"
-                  position="right"
-                  width="400px"
-                  height="500px"
-                  fSize="48px"
-                  fColor="gray"
-                >
-                  OPEN WEATHER APP
-                </ImgOverlay>
-              </Link>
-            </Col>
-            <Col md="4">
-              <Link to="/university" className="overlay-image">
-                <ImgOverlay
-                  imgSrc={university}
-                  bgColor="pink"
-                  position="right"
-                  width="100%"
-                  maxWidth="400px"
-                  height="500px"
-                  fSize="48px"
-                  fColor="gray"
-                >
-                  OPEN UNIVERSITY APP
-                </ImgOverlay>
-              </Link>
-            </Col>
-            <Col md="4">
-              <Link to="/animal" className="overlay-image">
-                <ImgOverlay
-                  imgSrc={animal}
-                  bgColor="pink"
-                  position="right"
-                  width="100%"
-                  maxWidth="400px"
-                  height="500px"
-                  fSize="48px"
-                  fColor="gray"
-                >
-                  OPEN ANIMAL APP
-                </ImgOverlay>
-              </Link>
-            </Col>
+            {HomeScreenFormate.map((item, id) => (
+              <Col md={4} key={id}>
+                <Link className="overlay-image" to={`${item.link}`}>
+                  <ImgOverlay
+                    imgSrc={item.img}
+                    bgColor="pink"
+                    position="right"
+                    width="400px"
+                    height="500px"
+                    fSize="48px"
+                    fColor="gray"
+                  >
+                    {item.imgOverlay}
+                  </ImgOverlay>
+                </Link>
+              </Col>
+            ))}
           </Row>
         </CardBody>
       </Card>
