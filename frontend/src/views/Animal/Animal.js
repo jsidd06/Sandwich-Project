@@ -1,21 +1,32 @@
-import React, { useState } from 'react'
-import {Button, Card, CardBody, CardHeader, Col, Container, Input, Row} from "reactstrap"
-import axios from 'axios'
+import React, { useState } from "react";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Container,
+  Input,
+  Row,
+} from "reactstrap";
+import axios from "axios";
 function Animal() {
-    const [animal, setAnimal] = useState([]);
-    const [animalName, setAnimalName] = useState('');
-    const [loading, setLoading] = useState(false);
-    const submitHandler = () => {
-        setLoading(true);
-        axios.get("https://api.publicapis.org/entries").then((res) => {
-            setAnimal(res.data.entries);
-            setLoading(false);
-        }).catch((err) => {
-            setLoading(false);
-            console.log(err);
-        })
-
-    }
+  const [animal, setAnimal] = useState([]);
+  const [animalName, setAnimalName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const submitHandler = () => {
+    setLoading(true);
+    axios
+      .get("https://api.publicapis.org/entries")
+      .then((res) => {
+        setAnimal(res.data.entries);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
+  };
   return (
     <Container style={{ textAlign: "center" }}>
       <Card>
@@ -28,13 +39,16 @@ function Animal() {
             placeholder="find with name"
             onChange={(e) => setAnimalName(e.target.value)}
           />
-          <Button className="mt-3"onClick={submitHandler}>Search Now</Button>
+          <Button className="mt-3 mb-4" onClick={submitHandler}>
+            Search Now
+          </Button>
           {loading ? (
             <div className="mt-5 text-center">
               <i
                 style={{ fontSize: 50 }}
-                className="fas fa-spinner fa-spin"
+                className="fas text-success fa-spinner fa-spin mb-4"
               ></i>
+              <h5>Please Wait ✋ We are Fetching Your Data..</h5>
             </div>
           ) : (
             animal &&
@@ -74,4 +88,4 @@ function Animal() {
   );
 }
 
-export default Animal
+export default Animal;

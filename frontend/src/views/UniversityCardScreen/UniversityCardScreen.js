@@ -28,7 +28,7 @@ function UniversityCardScreen() {
           placeholder="enter your university name"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <Button className="mt-3" onClick={universitiesHandler}>
+        <Button className="mt-3 mb-4" onClick={universitiesHandler}>
           Check Now
         </Button>
 
@@ -36,8 +36,9 @@ function UniversityCardScreen() {
           <div className="mt-5 text-center">
             <i
               style={{ fontSize: 50 }}
-              className="fas text-success fa-spinner fa-spin"
+              className="fas text-success fa-spinner fa-spin mb-4"
             ></i>
+            <h5>Please Wait ✋ We are Fetching Your Data..</h5>
           </div>
         ) : (
           universities &&
