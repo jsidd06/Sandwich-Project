@@ -4,16 +4,21 @@
   }
 }
 
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 3px;
-}  
+}
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: initial;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #3f4b4a;
   border-radius: 50px;
+}
+
+.overlay-image img {
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover;
 }

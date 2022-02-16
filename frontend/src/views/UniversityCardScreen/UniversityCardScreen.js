@@ -9,19 +9,18 @@ import {
   Input,
   Row,
 } from "reactstrap"
-
 function UniversityCardScreen() {
   const [universities, setUniversities] = useState([]);
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState("");
-  const [isloading, setIsloading] = useState(false);
+  const [isloading, setIsloading] = useState(true);
   const universitiesHandler = () => {
-    setIsloading(true);
     axios
       .get(`http://universities.hipolabs.com/search?${country}=United+States`)
       .then((res) => {
         console.log(res.data);
         setUniversities(res.data);
+        setIsloading(false);
       });
   };
   return (
@@ -33,7 +32,7 @@ function UniversityCardScreen() {
           onChange={(e) => setSearch(e.target.value)}
         />
         <Button className="mt-3" onClick={universitiesHandler}>Check Now</Button>
-        {universities &&
+        { universities  &&
           universities
             .filter((university) =>
               university.country.toLowerCase().includes(search.toLowerCase())
