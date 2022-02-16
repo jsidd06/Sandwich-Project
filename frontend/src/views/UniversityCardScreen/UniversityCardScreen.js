@@ -5,18 +5,18 @@ function UniversityCardScreen() {
   const [universities, setUniversities] = useState([]);
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState("");
-  const [isloading, setIsloading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const universitiesHandler = () => {
-    setIsloading(true);
+    setIsLoading(true);
     axios
       .get(`http://universities.hipolabs.com/search?${country}=United+States`)
       .then((res) => {
         console.log(res.data);
         setUniversities(res.data);
-        setIsloading(false);
+        setIsLoading(false);
       })
       .catch((err) => {
-        setIsloading(false);
+        setIsLoading(false);
         console.log(err);
       });
   };
@@ -32,7 +32,7 @@ function UniversityCardScreen() {
           Check Now
         </Button>
 
-        {isloading ? (
+        {isLoading ? (
           <div className="mt-5 text-center">
             <i
               style={{ fontSize: 50 }}

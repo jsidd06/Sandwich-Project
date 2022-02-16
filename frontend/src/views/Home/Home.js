@@ -13,6 +13,7 @@ import weather from "../../Images/11machin-illo-articleLarge-v3.jpg";
 import { ImgOverlay } from "image-overlay-react";
 import "image-overlay-react/dist/index.css";
 import university from "../../Images/20virus-briefing-rice-university-virtual-mobileMasterAt3x.jpg";
+import animal from "../../Images/1122614.jpg"
 function Home() {
   return (
     <Container style={{ textAlign: "center" }}>
@@ -50,6 +51,22 @@ function Home() {
                   fColor="gray"
                 >
                   OPEN UNIVERSITY APP
+                </ImgOverlay>
+              </Link>
+            </Col>
+            <Col md="4">
+              <Link to="/animal" className="overlay-image">
+                <ImgOverlay
+                  imgSrc={animal}
+                  bgColor="pink"
+                  position="right"
+                  width="100%"
+                  maxWidth="400px"
+                  height="500px"
+                  fSize="48px"
+                  fColor="gray"
+                >
+                  OPEN ANIMAL APP
                 </ImgOverlay>
               </Link>
             </Col>
