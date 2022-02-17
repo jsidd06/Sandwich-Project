@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Button, Card, CardBody, Col, Container, Input, Row } from "reactstrap";
+import { ToastContainer, toast } from "react-toastify";
 function UniversityCardScreen() {
   const [universities, setUniversities] = useState([]);
   const [search, setSearch] = useState("");
@@ -14,6 +15,7 @@ function UniversityCardScreen() {
         console.log(res.data);
         setUniversities(res.data);
         setIsLoading(false);
+        toast.success("Universities Data Fetched Successfully");
       })
       .catch((err) => {
         setIsLoading(false);
@@ -27,11 +29,16 @@ function UniversityCardScreen() {
         <Input
           placeholder="enter your university name"
           onChange={(e) => setSearch(e.target.value)}
+          value={search}
+          maxLength="50"
+          invalid={search.length === 0}
+          minLength="3"
+          valid={search.length > 0}
         />
         <Button className="mt-3 mb-4" onClick={universitiesHandler}>
           Check Now
         </Button>
-
+        <ToastContainer />
         {isLoading ? (
           <div className="mt-5 text-center">
             <i
