@@ -31,13 +31,28 @@ function UniversityCardScreen() {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
           maxLength="50"
-          invalid={search.length === 0}
           minLength="3"
           valid={search.length > 0}
         />
-        <Button className="mt-3 mb-4" onClick={universitiesHandler}>
-          Check Now
-        </Button>
+        <Card className="mt-4 p-5">
+          <Row>
+            <Col md="4">
+              <h4>
+                Please Check All world Universities without typing input:-
+              </h4>
+            </Col>
+            <Col md="4">
+              <Button className="mt-3 mb-4" onClick={universitiesHandler}>
+                Check Now
+              </Button>
+            </Col>
+            <Col md="4">
+              <Button className="mt-3 mb-4" onClick={universitiesHandler}>
+                Search Now
+              </Button>
+            </Col>
+          </Row>
+        </Card>
         <ToastContainer />
         {isLoading ? (
           <div className="mt-5 text-center">
