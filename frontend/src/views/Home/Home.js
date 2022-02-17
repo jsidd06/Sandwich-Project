@@ -12,23 +12,27 @@ import { ImgOverlay } from "image-overlay-react";
 import HomeScreenFormate from "../../Data/Data";
 function Home() {
   return (
-    <Container>
+    <Container className="mt-2">
       {" "}
       <Card>
-        <CardHeader>
+        <CardHeader className="text-center">
           <h1>Sandwich</h1>
         </CardHeader>
         <CardBody className="mt-1">
           <Row>
             {HomeScreenFormate.map((item, id) => (
-              <Col md={4} key={id} className="mt-5">
+              <Col
+                md={3}
+                key={id}
+                className="mt-5"
+              >
                 <Link className="overlay-image" to={`${item.link}`}>
                   <ImgOverlay
                     imgSrc={item.img}
                     bgColor="pink"
                     position="right"
-                    width="400px"
-                    height="500px"
+                    width="300px"
+                    height="350px"
                     fSize="48px"
                     fColor="gray"
                   >
