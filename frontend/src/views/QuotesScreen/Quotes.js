@@ -27,13 +27,13 @@ function QuotesScreen() {
       >
         New Quote
       </Button>
-      {<Card>hi</Card> && (
-        <Row>
-          <h1 className="newStyle">
-            {quotes.content}
-          </h1>
-          <h4 className="cursorStyle">{quotes.author}</h4>
-        </Row>
+      {quotes.content ? ( 
+        <>
+          <h1 className="newStyle">{quotes.content}</h1>
+          <h4 className="cursorStyle">Author Name:- {quotes.author}</h4>
+        </>
+      ) : (
+        <h1>No Quotes Found 🤔</h1>
       )}
     </Container>
   );
