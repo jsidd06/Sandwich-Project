@@ -33,7 +33,7 @@ function QuotesScreen() {
       <Button
         className="mt-4 mb-4"
         style={{ paddingLeft: 50, paddingRight: 50 }}
-        color="primary"
+        color="dark"
         onClick={submitHandler}
         type="submit"
       >

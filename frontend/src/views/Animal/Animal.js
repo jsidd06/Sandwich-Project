@@ -54,8 +54,8 @@ function Animal() {
                 </h6>
               </Col>
               <Col md="6">
-                <Button className="mt-3 mb-4" onClick={submitHandler}>
-                  Search Now
+                <Button className="mt-3 mb-4" color="info" onClick={submitHandler}>
+                  {loading ? "Loading..." : "Search Now" || "Search Now"}
                 </Button>
               </Col>
             </Row>

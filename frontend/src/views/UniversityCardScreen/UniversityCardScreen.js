@@ -45,12 +45,12 @@ function UniversityCardScreen() {
               </h6>
             </Col>
             <Col md="4">
-              <Button className="mt-3 mb-4" onClick={universitiesHandler}>
+              <Button className="mt-3 mb-4" color="warning" onClick={universitiesHandler}>
                 Check Now
               </Button>
             </Col>
             <Col md="4">
-              <Button className="mt-3 mb-4" onClick={universitiesHandler}>
+              <Button className="mt-3 mb-4" color="success" onClick={universitiesHandler}>
                 Search Now
               </Button>
             </Col>
