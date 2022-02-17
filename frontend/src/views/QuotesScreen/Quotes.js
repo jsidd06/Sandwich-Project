@@ -3,12 +3,15 @@ import {Button, Card, Container, Row} from 'reactstrap'
 import axios from 'axios'
 function QuotesScreen() {
   const [quotes, setQuotes] = useState([]);
+  const [loading, setLoading] = useState(false);
   const submitHandler = () => {
+    setLoading(true);
     axios
       .get("https://api.quotable.io/random")
       .then((res) => {
         console.log(res.data);
         setQuotes(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -37,7 +40,7 @@ function QuotesScreen() {
         onClick={submitHandler}
         type="submit"
       >
-        New Quote
+        {loading ? "Loading..." : "New Quote"}
       </Button>
     </Container>
   );

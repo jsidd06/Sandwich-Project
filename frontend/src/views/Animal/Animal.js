@@ -38,7 +38,7 @@ function Animal() {
         <CardBody>
           <h3>Animal Facts</h3>
           <Input
-            placeholder="find with name"
+            placeholder="Type Animal Name"
             onChange={(e) => setAnimalName(e.target.value)}
             value={animalName}
             maxLength="20"

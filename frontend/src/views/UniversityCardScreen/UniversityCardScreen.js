@@ -27,7 +27,7 @@ function UniversityCardScreen() {
       <Container style={{ textAlign: "center" }} className="mt-5">
         <h1>All Universities Find Here</h1>
         <Input
-          placeholder="enter your university name"
+          placeholder="Enter Your University Name or You Can Enter also Country Name"
           onChange={(e) => setSearch(e.target.value)}
           value={search}
           maxLength="50"
