@@ -5,4 +5,5 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "image-overlay-react/dist/index.css";
+ import "react-toastify/dist/ReactToastify.css";
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import {Container,Row,Col,Input,Button, CardBody, Card} from 'reactstrap'
+ import { ToastContainer, toast } from "react-toastify";
 function WeatherCardScreen() {
     const [weather,setWeather] = useState(null)
     const [city,setCity] = useState('')
@@ -12,9 +13,11 @@ function WeatherCardScreen() {
           .then((response) => {
             console.log(response.data);
             setWeather(response.data);
+            toast.success("Weather Data Fetched Successfully")
           })
           .catch((error) => {
             console.log(error);
+            toast.error("Please Enter Valid City Name")
           });
     }
   return (
@@ -23,10 +26,16 @@ function WeatherCardScreen() {
       <Input
         onChange={(e) => setCity(e.target.value)}
         placeholder="enter your city name"
+        value={city}
+        maxLength="20"
+        invalid={city.length === 0}
+        minLength="3"
+        valid={city.length > 0}
       />
       <Button className="mt-3" onClick={weatherCall}>
         Search
       </Button>
+      <ToastContainer />
       {weather ? (
         <Container style={{ textAlign: "center" }} className="mt-4">
           <Card>
