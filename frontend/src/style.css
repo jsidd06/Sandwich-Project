@@ -8,6 +8,9 @@
 .cursorStyle{
   font-family: 'Dancing Script', cursive;
 }
+.newStyle{
+  font-family: 'Roboto Serif', sans-serif;
+}
 ::-webkit-scrollbar {
   width: 3px;
 }

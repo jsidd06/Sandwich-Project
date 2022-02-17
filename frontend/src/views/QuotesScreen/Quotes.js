@@ -27,12 +27,14 @@ function QuotesScreen() {
       >
         New Quote
       </Button>
-      <Card>
+      {<Card>hi</Card> && (
         <Row>
-          <h1>{quotes.content}</h1>
-          <h4 className="cursorStyle">Author:- {quotes.author}</h4>
+          <h1 className="newStyle">
+            {quotes.content}
+          </h1>
+          <h4 className="cursorStyle">{quotes.author}</h4>
         </Row>
-      </Card>
+      )}
     </Container>
   );
 }
