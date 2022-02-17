@@ -9,6 +9,7 @@ import {
   Input,
   Row,
 } from "reactstrap";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 function Animal() {
   const [animal, setAnimal] = useState([]);
@@ -21,6 +22,7 @@ function Animal() {
       .then((res) => {
         setAnimal(res.data.entries);
         setLoading(false);
+        toast.success("Animal Data Fetched Successfully");
       })
       .catch((err) => {
         setLoading(false);
@@ -38,10 +40,27 @@ function Animal() {
           <Input
             placeholder="find with name"
             onChange={(e) => setAnimalName(e.target.value)}
+            value={animalName}
+            maxLength="20"
+            minLength="3"
           />
-          <Button className="mt-3 mb-4" onClick={submitHandler}>
-            Search Now
-          </Button>
+          <Card className="mt-4 p-3">
+            <Row>
+              <Col md="6">
+                <h6>
+                  if you like the check the data you can easily check without filing
+                  input filed. when you get all data then you can type also and it will help you to find your data if it's in
+                  over storage data.
+                </h6>
+              </Col>
+              <Col md="6">
+                <Button className="mt-3 mb-4" onClick={submitHandler}>
+                  Search Now
+                </Button>
+              </Col>
+            </Row>
+          </Card>
+          <ToastContainer />
           {loading ? (
             <div className="mt-5 text-center">
               <i

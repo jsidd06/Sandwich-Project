@@ -37,9 +37,12 @@ function UniversityCardScreen() {
         <Card className="mt-4 p-5">
           <Row>
             <Col md="4">
-              <h4>
-                Please Check All world Universities without typing input:-
-              </h4>
+              <h6>
+                if you like the check the data you can easily check without
+                filing input filed. when you get all data then you can type also
+                and it will help you to find your data if it's in over storage
+                data.
+              </h6>
             </Col>
             <Col md="4">
               <Button className="mt-3 mb-4" onClick={universitiesHandler}>
