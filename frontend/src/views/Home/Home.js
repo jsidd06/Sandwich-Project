@@ -18,10 +18,10 @@ function Home() {
         <CardHeader>
           <h1>Sandwich</h1>
         </CardHeader>
-        <CardBody>
+        <CardBody className="mt-1">
           <Row>
             {HomeScreenFormate.map((item, id) => (
-              <Col md={4} key={id}>
+              <Col md={4} key={id} className="mt-5">
                 <Link className="overlay-image" to={`${item.link}`}>
                   <ImgOverlay
                     imgSrc={item.img}

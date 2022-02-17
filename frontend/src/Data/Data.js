@@ -1,25 +1,31 @@
 const HomeScreenFormate = [
   {
     id: "1",
-    heading: "Sandwich",
+    heading: "Weather",
     link: "/weather",
     img: "/Images/11machin-illo-articleLarge-v3.jpg",
     imgOverlay: "OPEN WEATHER APP",
   },
   {
     id: "2",
-    heading: "Sandwich",
+    heading: "Universities",
     link: "/university",
     img: "/Images/20virus-briefing-rice-university-virtual-mobileMasterAt3x.jpg",
     imgOverlay: "OPEN UNIVERSITY APP",
   },
   {
     id: "3",
-    heading: "Sandwich",
+    heading: "Animals",
     link: "/animal",
     img: "/Images/1122614.jpg",
     imgOverlay: "OPEN ANIMAL APP",
-  },
+  },{
+    id: "4",
+    heading: "Quotes",
+    link: "/quotes",
+    img: "/Images/quotes.jpg",
+    imgOverlay: "OPEN QUOTES APP",
+  }
 ];
 
 export default HomeScreenFormate;
