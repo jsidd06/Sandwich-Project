@@ -4,7 +4,9 @@
     width: 100%;
   }
 }
-
+.newOne{
+  font-family: 'Roboto Serif', sans-serif;
+}
 .cursorStyle{
   font-family: 'Dancing Script', cursive;
 }
