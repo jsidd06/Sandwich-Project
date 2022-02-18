@@ -19,19 +19,21 @@ const HomeScreenFormate = [
     link: "/animal",
     img: "/Images/1122614.jpg",
     imgOverlay: "OPEN ANIMAL APP",
-  },{
+  },
+  {
     id: "4",
     heading: "Quotes",
     link: "/quotes",
     img: "/Images/quotes.jpg",
     imgOverlay: "OPEN QUOTES APP",
-  },{
+  },
+  {
     id: "5",
-    heading: "Books",
+    heading: "Quran Book",
     link: "/book",
     img: "/Images/book.jpg",
-    imgOverlay: "OPEN BOOKS APP",
-  }
+    imgOverlay: "OPEN Quran Book APP",
+  },
 ];
 
 export default HomeScreenFormate;

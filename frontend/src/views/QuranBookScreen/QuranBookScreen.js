@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Card, CardHeader, CardBody, Input } from "reactstrap";
-function BookScreen() {
+function QuranBookScreen() {
   const [book, setBook] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -22,7 +22,7 @@ function BookScreen() {
     <Container>
       <Card>
         <CardHeader>
-          <h1>Book</h1>
+          <h1>Quran Book</h1>
           <Input onChange={(e) => setSearch(e.target.value)} />
         </CardHeader>
         {loading ? (
@@ -64,4 +64,4 @@ function BookScreen() {
   );
 }
 
-export default BookScreen;
+export default QuranBookScreen;

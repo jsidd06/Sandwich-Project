@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Animal from '../../views/Animal/Animal'
-import BookScreen from '../../views/BookScreen/BookScreen'
 import CovidScreen from '../../views/CovidScreen/CovidScreen'
 import Home from '../../views/Home/Home'
 import QuotesScreen from '../../views/QuotesScreen/Quotes'
+import QuranBookScreen from '../../views/QuranBookScreen/QuranBookScreen'
 import UniversityCardScreen from '../../views/UniversityCardScreen/UniversityCardScreen'
 import WeatherCardScreen from '../../views/WeatherCardScreen/WeatherCardScreen'
 
@@ -17,7 +17,7 @@ function ScreenRoutes() {
       <Route path="/animal" element={<Animal />} />
       <Route path="/quotes" element={<QuotesScreen />} />
       <Route path="/covid" element={<CovidScreen />} />
-      <Route path="/book" element={<BookScreen />} />
+      <Route path="/quran-book" element={<QuranBookScreen />} />
     </Routes>
   );
 }
