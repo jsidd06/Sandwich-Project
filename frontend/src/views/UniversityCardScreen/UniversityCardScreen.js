@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Card, CardBody, Col, Container, Input, Row } from "reactstrap";
+import { Card, CardBody, Col, Container, Input, Row } from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
 function UniversityCardScreen() {
   const [universities, setUniversities] = useState([]);

@@ -6,6 +6,7 @@ import AllArticals from '../../views/Articals/AllArticals'
 import BusinessArticals from '../../views/Articals/BusinessArticals'
 import TechCrunchArticles from '../../views/Articals/TechCrunchArticles'
 import YesterdayArticles from '../../views/Articals/YesterdayArtical'
+import BikeScreen from '../../views/BikeScreen/BikeScreen'
 import CovidScreen from '../../views/CovidScreen/CovidScreen'
 import Home from '../../views/Home/Home'
 import IpGeo from '../../views/IpGeo/IpGeo'
@@ -30,6 +31,7 @@ function ScreenRoutes() {
       <Route path="/last-six-month-articles" element={<LastSixMonthArticle />} />
       <Route path="/tech-crunch-article" element={<TechCrunchArticles />} />
       <Route path="/yesterday-article" element={<YesterdayArticles />} />
+      <Route path="/bike-screen" element={<BikeScreen />} />
 
     </Routes>
   );
