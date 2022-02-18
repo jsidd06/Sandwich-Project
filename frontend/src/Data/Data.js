@@ -41,6 +41,13 @@ const HomeScreenFormate = [
     img: "/Images/covid.jpg",
     imgOverlay: "OPEN Covid-19 APP",
   },
+  {
+    id: "7",
+    heading: "IP-Geo",
+    link: "/ip-geo",
+    img: "/Images/ipgeo.png",
+    imgOverlay: "OPEN IP-Geo APP",
+  }
 ];
 
 export default HomeScreenFormate;

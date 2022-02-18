@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router-dom'
 import Animal from '../../views/Animal/Animal'
 import CovidScreen from '../../views/CovidScreen/CovidScreen'
 import Home from '../../views/Home/Home'
+import IpGeo from '../../views/IpGeo/IpGeo'
 import QuotesScreen from '../../views/QuotesScreen/Quotes'
 import QuranBookScreen from '../../views/QuranBookScreen/QuranBookScreen'
 import UniversityCardScreen from '../../views/UniversityCardScreen/UniversityCardScreen'
@@ -18,6 +19,7 @@ function ScreenRoutes() {
       <Route path="/quotes" element={<QuotesScreen />} />
       <Route path="/covid" element={<CovidScreen />} />
       <Route path="/quran-book" element={<QuranBookScreen />} />
+      <Route path="/ip-geo" element={<IpGeo />} />
     </Routes>
   );
 }
