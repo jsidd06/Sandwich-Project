@@ -47,6 +47,12 @@ const HomeScreenFormate = [
     link: "/ip-geo",
     img: "/Images/ipgeo.png",
     imgOverlay: "OPEN IP-Geo APP",
+  },{
+    id: "8",
+    heading: "Live Articals",
+    link: "/live-articals",
+    img: "/Images/artical.jpg",
+    imgOverlay: "OPEN Live Articals APP",
   }
 ];
 

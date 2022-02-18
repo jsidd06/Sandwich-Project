@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Animal from '../../views/Animal/Animal'
+import Articals from '../../views/Articals/Articals'
 import CovidScreen from '../../views/CovidScreen/CovidScreen'
 import Home from '../../views/Home/Home'
 import IpGeo from '../../views/IpGeo/IpGeo'
@@ -20,6 +21,7 @@ function ScreenRoutes() {
       <Route path="/covid" element={<CovidScreen />} />
       <Route path="/quran-book" element={<QuranBookScreen />} />
       <Route path="/ip-geo" element={<IpGeo />} />
+      <Route path="/live-articals" element={<Articals />} />
     </Routes>
   );
 }
