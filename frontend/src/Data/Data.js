@@ -25,6 +25,12 @@ const HomeScreenFormate = [
     link: "/quotes",
     img: "/Images/quotes.jpg",
     imgOverlay: "OPEN QUOTES APP",
+  },{
+    id: "5",
+    heading: "Books",
+    link: "/book",
+    img: "/Images/book.jpg",
+    imgOverlay: "OPEN BOOKS APP",
   }
 ];
 
