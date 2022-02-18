@@ -22,9 +22,9 @@ function IpGeo() {
         <CardBody>
           {info.map(([key, value], index) => (
             <Card key={index} className="p-4">
-              <p>
+              <h5>
                 {key} : {value || "N/A"}
-              </p>
+              </h5>
             </Card>
           ))}
         </CardBody>
