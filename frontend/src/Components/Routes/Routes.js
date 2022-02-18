@@ -1,7 +1,11 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Animal from '../../views/Animal/Animal'
-import Articals from '../../views/Articals/Articals'
+import LastSixMonthArticle from '../../views/Articals/AllArticals'
+import AllArticals from '../../views/Articals/AllArticals'
+import BusinessArticals from '../../views/Articals/BusinessArticals'
+import TechCrunchArticles from '../../views/Articals/TechCrunchArticles'
+import YesterdayArticles from '../../views/Articals/YesterdayArtical'
 import CovidScreen from '../../views/CovidScreen/CovidScreen'
 import Home from '../../views/Home/Home'
 import IpGeo from '../../views/IpGeo/IpGeo'
@@ -21,7 +25,12 @@ function ScreenRoutes() {
       <Route path="/covid" element={<CovidScreen />} />
       <Route path="/quran-book" element={<QuranBookScreen />} />
       <Route path="/ip-geo" element={<IpGeo />} />
-      <Route path="/live-articals" element={<Articals />} />
+      <Route path="/live-all-articles" element={<AllArticals />} />
+      <Route path="/business-articles" element={<BusinessArticals />} />
+      <Route path="/last-six-month-articles" element={<LastSixMonthArticle />} />
+      <Route path="/tech-crunch-article" element={<TechCrunchArticles />} />
+      <Route path="/yesterday-article" element={<YesterdayArticles />} />
+
     </Routes>
   );
 }
