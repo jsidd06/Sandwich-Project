@@ -51,9 +51,6 @@ function QuranBookScreen() {
                     <h3>Direction:- {item.direction}</h3>
                     <a href={`${item.source}`}>Link:- {item.source}</a>
                     <h5>Comments:- {item.comments}</h5>
-                    <a href={`${item.link}`}>Link:- {item.link}</a>
-                    <br></br>
-                    <a href={`${item.linkmin}`}>Link:- {item.linkmin}</a>
                   </CardBody>
                 </Card>
               </Container>
