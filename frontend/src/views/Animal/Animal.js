@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Card,
@@ -15,20 +15,20 @@ function Animal() {
   const [animal, setAnimal] = useState([]);
   const [animalName, setAnimalName] = useState("");
   const [loading, setLoading] = useState(false);
-  const submitHandler = () => {
-    setLoading(true);
-    axios
-      .get("https://api.publicapis.org/entries")
-      .then((res) => {
-        setAnimal(res.data.entries);
-        setLoading(false);
-        toast.success("Animal Data Fetched Successfully");
-      })
-      .catch((err) => {
-        setLoading(false);
-        console.log(err);
-      });
-  };
+ useEffect(() => {
+   setLoading(true);
+   axios
+     .get("https://api.publicapis.org/entries")
+     .then((res) => {
+       setAnimal(res.data.entries);
+       setLoading(false);
+       toast.success("Animal Data Fetched Successfully");
+     })
+     .catch((err) => {
+       setLoading(false);
+       console.log(err);
+     });
+ } ,[])
   return (
     <Container style={{ textAlign: "center" }}>
       <Card>
@@ -44,22 +44,6 @@ function Animal() {
             maxLength="20"
             minLength="3"
           />
-          <Card className="mt-4 p-3">
-            <Row>
-              <Col md="6">
-                <h6>
-                  if you like the check the data you can easily check without filing
-                  input filed. when you get all data then you can type also and it will help you to find your data if it's in
-                  over storage data.
-                </h6>
-              </Col>
-              <Col md="6">
-                <Button className="mt-3 mb-4" color="info" onClick={submitHandler}>
-                  {loading ? "Loading..." : "Search Now" || "Search Now"}
-                </Button>
-              </Col>
-            </Row>
-          </Card>
           <ToastContainer />
           {loading ? (
             <div className="mt-5 text-center">
