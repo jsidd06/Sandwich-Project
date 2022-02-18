@@ -30,9 +30,16 @@ const HomeScreenFormate = [
   {
     id: "5",
     heading: "Quran Book",
-    link: "/book",
+    link: "/quran-book",
     img: "/Images/book.jpg",
     imgOverlay: "OPEN Quran Book APP",
+  },
+  {
+    id: "6",
+    heading: "Covid-19",
+    link: "/covid",
+    img: "/Images/covid.jpg",
+    imgOverlay: "OPEN Covid-19 APP",
   },
 ];
 

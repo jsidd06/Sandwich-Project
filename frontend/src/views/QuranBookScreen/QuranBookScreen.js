@@ -23,7 +23,7 @@ function QuranBookScreen() {
       <Card>
         <CardHeader>
           <h1>Quran Book</h1>
-          <Input onChange={(e) => setSearch(e.target.value)} />
+          <Input onChange={(e) => setSearch(e.target.value)} placeholder="type book name" />
         </CardHeader>
         {loading ? (
           <div className="mt-5 text-center">
