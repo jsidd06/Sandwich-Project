@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
+import AdministrativeDivisons from '../../views/AdministrativeDivisons/AdministrativeDivisons'
 import Animal from '../../views/Animal/Animal'
 import LastSixMonthArticle from '../../views/Articals/AllArticals'
 import AllArticals from '../../views/Articals/AllArticals'
@@ -32,6 +33,7 @@ function ScreenRoutes() {
       <Route path="/tech-crunch-article" element={<TechCrunchArticles />} />
       <Route path="/yesterday-article" element={<YesterdayArticles />} />
       <Route path="/bike-screen" element={<BikeScreen />} />
+      <Route path="/administrative-divisions-db" element={<AdministrativeDivisons />} />
 
     </Routes>
   );
