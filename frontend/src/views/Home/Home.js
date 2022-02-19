@@ -27,47 +27,51 @@ function Home() {
       setCurrentPage(newOffset);
     };
   return (
-    <Container className="mt-2">
-      {" "}
-      <Card className="cool">
-        <CardHeader className="text-center">
-          <h1>Sandwich</h1>
-        </CardHeader>
-        <CardBody className="mt-1">
-          <Row>
-            {currentItem.map((item, id) => (
-              <Col md={3} key={id} className="mt-5 cardShadow p-3">
-                <Link className="overlay-image" to={`${item.link}`}>
-                  <ImgOverlay
-                    imgSrc={item.img}
-                    bgColor="pink"
-                    position="right"
-                    width="300px"
-                    height="350px"
-                    fSize="48px"
-                    fColor="gray"
-                  >
-                    {item.imgOverlay}
-                  </ImgOverlay>
-                </Link>
-              </Col>
-            ))}
-          </Row>
-        </CardBody>
-      </Card>
-      <ReactPaginate
-        previousLabel={"Back"}
-        nextLabel={"Next"}
-        breakLabel={"..."}
-        breakClassName={"break-me"}
-        pageCount={data.length / itemsPerPage}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={3}
-        onPageChange={handlePageClick}
-        containerClassName={"pagination"}
-        activeClassName={"active"}
-      />
-    </Container>
+    <>
+      <Container className="mt-2">
+        {" "}
+        <Card className="cool">
+          <CardHeader className="text-center">
+            <h1>Sandwich</h1>
+          </CardHeader>
+          <CardBody className="mt-1">
+            <Row>
+              {currentItem.map((item, id) => (
+                <Col md={3} key={id} className="mt-5 cardShadow p-3">
+                  <Link className="overlay-image" to={`${item.link}`}>
+                    <ImgOverlay
+                      imgSrc={item.img}
+                      bgColor="pink"
+                      position="right"
+                      width="300px"
+                      height="350px"
+                      fSize="48px"
+                      fColor="gray"
+                    >
+                      {item.imgOverlay}
+                    </ImgOverlay>
+                  </Link>
+                </Col>
+              ))}
+            </Row>
+          </CardBody>
+        </Card>
+      </Container>
+      <Container>
+        <ReactPaginate
+          previousLabel={"Back"}
+          nextLabel={"Next"}
+          breakLabel={"..."}
+          breakClassName={"break-me"}
+          pageCount={data.length / itemsPerPage}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+        />
+      </Container>
+    </>
   );
 }
 
