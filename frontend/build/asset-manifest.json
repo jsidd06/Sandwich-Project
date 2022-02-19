@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sandwich-Project/static/css/main.8cab3979.css",
+    "main.js": "/Sandwich-Project/static/js/main.af4248d3.js",
+    "index.html": "/Sandwich-Project/index.html",
+    "main.8cab3979.css.map": "/Sandwich-Project/static/css/main.8cab3979.css.map",
+    "main.af4248d3.js.map": "/Sandwich-Project/static/js/main.af4248d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cab3979.css",
+    "static/js/main.af4248d3.js"
+  ]
+}

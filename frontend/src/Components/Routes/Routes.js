@@ -19,7 +19,7 @@ import WeatherCardScreen from '../../views/WeatherCardScreen/WeatherCardScreen'
 function ScreenRoutes() {
   return (
     <Routes>
-      <Route path="/" exact element={<Home />} />
+      <Route path="/Sandwich-Project" exact element={<Home />} />
       <Route path="/weather" element={<WeatherCardScreen />} />
       <Route path="/university" element={<UniversityCardScreen />} />
       <Route path="/animal" element={<Animal />} />
@@ -29,12 +29,17 @@ function ScreenRoutes() {
       <Route path="/ip-geo" element={<IpGeo />} />
       <Route path="/live-all-articles" element={<AllArticals />} />
       <Route path="/business-articles" element={<BusinessArticals />} />
-      <Route path="/last-six-month-articles" element={<LastSixMonthArticle />} />
+      <Route
+        path="/last-six-month-articles"
+        element={<LastSixMonthArticle />}
+      />
       <Route path="/tech-crunch-article" element={<TechCrunchArticles />} />
       <Route path="/yesterday-article" element={<YesterdayArticles />} />
       <Route path="/bike-screen" element={<BikeScreen />} />
-      <Route path="/administrative-divisions-db" element={<AdministrativeDivisons />} />
-
+      <Route
+        path="/administrative-divisions-db"
+        element={<AdministrativeDivisons />}
+      />
     </Routes>
   );
 }
