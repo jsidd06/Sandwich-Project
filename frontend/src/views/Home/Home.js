@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
   Card,
   CardBody,
+  CardFooter,
   CardHeader,
   Col,
   Container,
@@ -55,21 +56,21 @@ function Home() {
               ))}
             </Row>
           </CardBody>
+          <CardFooter>
+              <ReactPaginate
+                previousLabel={"Back"}
+                nextLabel={"Next"}
+                breakLabel={"..."}
+                breakClassName={"break-me"}
+                pageCount={data.length / itemsPerPage}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={3}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                activeClassName={"active"}
+              />
+          </CardFooter>
         </Card>
-      </Container>
-      <Container>
-        <ReactPaginate
-          previousLabel={"Back"}
-          nextLabel={"Next"}
-          breakLabel={"..."}
-          breakClassName={"break-me"}
-          pageCount={data.length / itemsPerPage}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={3}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination"}
-          activeClassName={"active"}
-        />
       </Container>
     </>
   );
