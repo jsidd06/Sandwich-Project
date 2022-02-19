@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -8,9 +8,24 @@ import {
   Container,
   Row,
 } from "reactstrap";
+import ReactPaginate from "react-paginate";
 import { ImgOverlay } from "image-overlay-react";
 import HomeScreenFormate from "../../Data/Data";
 function Home() {
+  const [data,setData] = useState(HomeScreenFormate);
+   const [noOfPages, setNoOfPages] = useState(0);
+   const [currentPage, setCurrentPage] = useState(0);
+   const [currentItem, setCurrentItem] = useState([]);
+   const [itemsPerPage, setItemsPerPage] = useState(8);
+    useEffect(() => {
+      const endOffset = currentPage + itemsPerPage;
+      setCurrentItem(data.slice(currentPage, endOffset));
+      setNoOfPages(Math.ceil(data.length / itemsPerPage));
+    }, [currentPage, itemsPerPage, data]);
+    const handlePageClick = (event) => {
+      const newOffset = (event.selected * itemsPerPage) % data.length;
+      setCurrentPage(newOffset);
+    };
   return (
     <Container className="mt-2">
       {" "}
@@ -20,7 +35,7 @@ function Home() {
         </CardHeader>
         <CardBody className="mt-1">
           <Row>
-            {HomeScreenFormate.map((item, id) => (
+            {currentItem.map((item, id) => (
               <Col
                 md={3}
                 key={id}
@@ -44,6 +59,18 @@ function Home() {
           </Row>
         </CardBody>
       </Card>
+       <ReactPaginate
+            previousLabel={'Back'}
+            nextLabel={'Next'}
+            breakLabel={'...'}
+            breakClassName={'break-me'}
+            pageCount={data.length / itemsPerPage}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageClick}
+            containerClassName={'pagination'}
+            activeClassName={'active'}
+          />
     </Container>
   );
 }

@@ -14,7 +14,7 @@
   font-family: 'Roboto Serif', sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,6 +24,41 @@
 ::-webkit-scrollbar-thumb {
   background: #3f4b4a;
   border-radius: 50px;
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 1px;
+  padding-right: 1px;
+  background: rgb(1, 0, 3);
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid rgb(1, 0, 3);
+}
+.pagination a {
+  color: white;
+  float: left;
+  font-size:20px;
+  text-decoration: none;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 0.5em;
+  color: #f1f1f1;
+  background: rgb(1, 0, 3);
+  border: 1px solid rgb(1, 0, 3);
+  border-radius: 5px;
+  margin-right: 1px;
+  margin-left: 1px;
+  background-color: rgb(15, 3, 3);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.pagination .active {
+  background: rgb(190, 189, 211);
 }
 
 .overlay-image img {
