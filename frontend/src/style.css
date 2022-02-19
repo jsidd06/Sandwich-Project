@@ -30,15 +30,15 @@
   display: inline-block;
   padding-left: 1px;
   padding-right: 1px;
-  background: rgb(1, 0, 3);
+  background: #008E89;
   margin-top: 20px;
   border-radius: 5px;
   font-weight: bold;
   color: white;
-  border: 1px solid rgb(1, 0, 3);
+  border: 1px solid #BFFFF0;
 }
 .pagination a {
-  color: white;
+  color: #361500;
   float: left;
   font-size:20px;
   text-decoration: none;
@@ -48,12 +48,12 @@
   display: inline-block;
   padding: 0.5em;
   color: #f1f1f1;
-  background: rgb(1, 0, 3);
-  border: 1px solid rgb(1, 0, 3);
+  background: #008E89;
+  border: 1px solid #008E89;
   border-radius: 5px;
   margin-right: 1px;
   margin-left: 1px;
-  background-color: rgb(15, 3, 3);
+  background-color: #008E89;
   border-radius: 5px;
   text-decoration: none;
 }
