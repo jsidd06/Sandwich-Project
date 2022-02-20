@@ -3,7 +3,7 @@ const HomeScreenFormate = [
     id: "1",
     heading: "Weather",
     link: "/weather",
-    img: "/images/weather.jpg",
+    img: "/Sandwich-Project/images/weather.jpg",
     imgOverlay: "OPEN WEATHER WEB",
   },
   {
