@@ -19,7 +19,7 @@ import WeatherCardScreen from '../../views/WeatherCardScreen/WeatherCardScreen'
 function ScreenRoutes() {
   return (
     <Routes>
-      <Route path="/" exact element={<Home />} />
+      <Route path="/Sandwich-Project" exact element={<Home />} />
       <Route path="/weather" element={<WeatherCardScreen />} />
       <Route path="/university" element={<UniversityCardScreen />} />
       <Route path="/animal" element={<Animal />} />

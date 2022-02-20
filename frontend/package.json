@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://github.com/jsidd06/Sandwich-Project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
