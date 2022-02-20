@@ -10,7 +10,7 @@ function UniversityCardScreen() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`http://universities.hipolabs.com/search?${country}=United+States`)
+      .get(`https://universities.hipolabs.com/search?${country}=United+States`)
       .then((res) => {
         console.log(res.data);
         setUniversities(res.data);

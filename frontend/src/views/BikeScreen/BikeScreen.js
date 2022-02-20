@@ -8,7 +8,7 @@ function BikeScreen() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://api.citybik.es/v2/networks?fields=id,name,href")
+      .get("https://api.citybik.es/v2/networks?fields=id,name,href")
       .then((res) => {
           console.log(res.data)
         setBike(res.data.networks);
