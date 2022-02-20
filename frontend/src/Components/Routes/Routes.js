@@ -20,24 +20,42 @@ function ScreenRoutes() {
   return (
     <Routes>
       <Route path="/Sandwich-Project" exact element={<Home />} />
-      <Route path="/weather" element={<WeatherCardScreen />} />
-      <Route path="/university" element={<UniversityCardScreen />} />
-      <Route path="/animal" element={<Animal />} />
-      <Route path="/quotes" element={<QuotesScreen />} />
-      <Route path="/covid" element={<CovidScreen />} />
-      <Route path="/quran-book" element={<QuranBookScreen />} />
-      <Route path="/ip-geo" element={<IpGeo />} />
-      <Route path="/live-all-articles" element={<AllArticals />} />
-      <Route path="/business-articles" element={<BusinessArticals />} />
+      <Route path="/Sandwich-Project/weather" element={<WeatherCardScreen />} />
       <Route
-        path="/last-six-month-articles"
+        path="/Sandwich-Project/university"
+        element={<UniversityCardScreen />}
+      />
+      <Route path="/Sandwich-Project/animal" element={<Animal />} />
+      <Route path="/Sandwich-Project/quotes" element={<QuotesScreen />} />
+      <Route path="/Sandwich-Project/covid" element={<CovidScreen />} />
+      <Route
+        path="/Sandwich-Project/quran-book"
+        element={<QuranBookScreen />}
+      />
+      <Route path="/Sandwich-Project/ip-geo" element={<IpGeo />} />
+      <Route
+        path="/Sandwich-Project/live-all-articles"
+        element={<AllArticals />}
+      />
+      <Route
+        path="/Sandwich-Project/business-articles"
+        element={<BusinessArticals />}
+      />
+      <Route
+        path="/Sandwich-Project/last-six-month-articles"
         element={<LastSixMonthArticle />}
       />
-      <Route path="/tech-crunch-article" element={<TechCrunchArticles />} />
-      <Route path="/yesterday-article" element={<YesterdayArticles />} />
-      <Route path="/bike-screen" element={<BikeScreen />} />
       <Route
-        path="/administrative-divisions-db"
+        path="/Sandwich-Project/tech-crunch-article"
+        element={<TechCrunchArticles />}
+      />
+      <Route
+        path="/Sandwich-Project/yesterday-article"
+        element={<YesterdayArticles />}
+      />
+      <Route path="/Sandwich-Project/bike-screen" element={<BikeScreen />} />
+      <Route
+        path="/Sandwich-Project/administrative-divisions-db"
         element={<AdministrativeDivisons />}
       />
     </Routes>
