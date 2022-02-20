@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Sandwich-Project/static/css/main.86e9f19f.css",
-    "main.js": "/Sandwich-Project/static/js/main.82eef65c.js",
+    "main.js": "/Sandwich-Project/static/js/main.a3e2a1ed.js",
     "index.html": "/Sandwich-Project/index.html",
     "main.86e9f19f.css.map": "/Sandwich-Project/static/css/main.86e9f19f.css.map",
-    "main.82eef65c.js.map": "/Sandwich-Project/static/js/main.82eef65c.js.map"
+    "main.a3e2a1ed.js.map": "/Sandwich-Project/static/js/main.a3e2a1ed.js.map"
   },
   "entrypoints": [
     "static/css/main.86e9f19f.css",
-    "static/js/main.82eef65c.js"
+    "static/js/main.a3e2a1ed.js"
   ]
 }
