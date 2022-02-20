@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @media only screen and (max-width: 600px) {
   .container {
     width: 100%;
   }
 }
-.cool {
-  background-image: url('');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
+
 .cardShadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -19,14 +13,14 @@
 .cardShadow:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.newOne{
-  font-family: 'Roboto Serif', sans-serif;
+.newOne {
+  font-family: "Roboto Serif", sans-serif;
 }
-.cursorStyle{
-  font-family: 'Dancing Script', cursive;
+.cursorStyle {
+  font-family: "Dancing Script", cursive;
 }
-.newStyle{
-  font-family: 'Roboto Serif', sans-serif;
+.newStyle {
+  font-family: "Roboto Serif", sans-serif;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -45,17 +39,17 @@
   display: inline-block;
   padding-left: 1px;
   padding-right: 1px;
-  background: #008E89;
+  background: #008e89;
   margin-top: 20px;
   border-radius: 5px;
   font-weight: bold;
   color: white;
-  border: 1px solid #BFFFF0;
+  border: 1px solid #bffff0;
 }
 .pagination a {
   color: #361500;
   float: left;
-  font-size:20px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -63,12 +57,12 @@
   display: inline-block;
   padding: 0.5em;
   color: #f1f1f1;
-  background: #008E89;
-  border: 1px solid #008E89;
+  background: #008e89;
+  border: 1px solid #008e89;
   border-radius: 5px;
   margin-right: 1px;
   margin-left: 1px;
-  background-color: #008E89;
+  background-color: #008e89;
   border-radius: 5px;
   text-decoration: none;
 }
