@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Sandwich-Project/static/css/main.8cab3979.css",
-    "main.js": "/Sandwich-Project/static/js/main.ab8e186c.js",
-    "index.html": "/Sandwich-Project/index.html",
-    "main.8cab3979.css.map": "/Sandwich-Project/static/css/main.8cab3979.css.map",
-    "main.ab8e186c.js.map": "/Sandwich-Project/static/js/main.ab8e186c.js.map"
+    "main.css": "/jsidd06/Sandwich-Project/static/css/main.86e9f19f.css",
+    "main.js": "/jsidd06/Sandwich-Project/static/js/main.ec582b00.js",
+    "index.html": "/jsidd06/Sandwich-Project/index.html",
+    "main.86e9f19f.css.map": "/jsidd06/Sandwich-Project/static/css/main.86e9f19f.css.map",
+    "main.ec582b00.js.map": "/jsidd06/Sandwich-Project/static/js/main.ec582b00.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cab3979.css",
-    "static/js/main.ab8e186c.js"
+    "static/css/main.86e9f19f.css",
+    "static/js/main.ec582b00.js"
   ]
 }
